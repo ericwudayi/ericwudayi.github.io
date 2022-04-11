@@ -1,4 +1,5 @@
 ---
+layout: page
 tags: audio, language-model, self-supervised learning 
 ---
 ## Unsupervised Data Selection via Discrete Speech Representation for ASR
