@@ -13,9 +13,9 @@ For example:
 - Speech recognition and ASR in small meeting room.
 
 **Condition**:
-- Maybe we don't have many data on target domain $T$, but you have another large "unlabeled" dataset $G$. However, this dataset may have too many data that you don't care about.
+- Maybe don't have many data on target domain $T$, but have another large "unlabeled" dataset $G$. However, this dataset may have too many data that is un-related to target domain.
   
-- Maybe you have a general model $M$, and you need to fine-tune this model to fit target domain $T$.
+- Have a general model $M$, and need to fine-tune this model to fit target domain $T$.
   
 **Problem**:
 
@@ -24,13 +24,15 @@ For example:
 **BreakingThrough**:
 - Use #language-model to sample a subset $g$ from $G$, that $P(g) \sim P(T)$. 
   
-- Train two #language-model $P_G$ and $P_T$ on dataset $G$ and $T$, respectively. For sample $g \in G$, it is selected if $\frac{log P_T( g )  - log(P_G(g))}{len(g)}$ is high.
+- Train two language-model $P_G$ and $P_T$ on dataset $G$ and $T$, respectively. For sample $g \in G$, it is selected if $\frac{log P_T( g )  - log(P_G(g))}{len(g)}$ is high.
 
 **Common Misunderstanding**:
 - Select $g \in G$ that $P_T(g)$ is high. 
  
     $P(g \in G)$ is not 0 or 1, and it is a probability. That means for even for specific $g \in G$, some of $g$ are in $T$ and some are not.
 
-**Results**
+**Results**:
+ASR performance is improved with much less data on different datasets with both pretraining and supervised scenario.
 
-![](../../attachments/2022-04-11-21-26-03.png)
+![](../../attachments/2022-04-12-08-22-30.png)
+![](../../attachments/2022-04-12-08-34-49.png)
