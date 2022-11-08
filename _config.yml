@@ -1,4 +1,5 @@
 theme: jekyll-text-theme
+remote-theme: jekyll-text-theme
 mathjax: true # false (default), true
 mathjax_autoNumber: true # false (default), true
 markdown    : kramdown
