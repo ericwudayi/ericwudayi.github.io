@@ -1,4 +1,4 @@
-remote-theme: jekyll-text-theme
+remote_theme: benbalter/retlab
 mathjax: true # false (default), true
 mathjax_autoNumber: true # false (default), true
 markdown    : kramdown
